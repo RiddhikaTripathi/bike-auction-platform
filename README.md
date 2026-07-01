@@ -2,6 +2,19 @@
 
 A production-ready, full-stack motorcycle auction platform built with React (Vite, TypeScript, Tailwind CSS) and Supabase (PostgreSQL, Auth, Realtime).
 
+## Deliverables
+
+- ✅ Source Code (GitHub Repository)
+- ✅ Live Deployed Application (Vercel)
+- ✅ Setup Instructions
+- ✅ Architecture & Design Overview
+- ✅ Deployment Instructions
+- ✅ Assumptions & Trade-offs
+  
+## Live Demo
+
+**Application:** https://bike-auction-platform-gamma.vercel.app/
+**GitHub Repository:** https://github.com/RiddhikaTripathi/bike-auction-platform
 
 ## Features
 
@@ -40,7 +53,7 @@ A production-ready, full-stack motorcycle auction platform built with React (Vit
 ## Project Structure
 
 ```
-bike-auction-platform/
+-auction-platform/
 ├── src/
 │   ├── components/
 │   │   ├── auth/           # Login and Register pages
@@ -76,7 +89,7 @@ bike-auction-platform/
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/RiddhikaTripathi/bike-auction-platform.git
    cd bike-auction-platform
    ```
 
@@ -197,7 +210,7 @@ supabase
 |--------|------|-------------|
 | id | uuid | Primary key |
 | title | text | Auction title |
-| brand | text | Bike brand |
+| brand | text | Motorcycle brand |
 | starting_price | decimal | Starting bid amount |
 | current_price | decimal | Current highest bid |
 | status | enum | draft, active, closed, cancelled |
@@ -228,6 +241,14 @@ All tables implement Row Level Security:
 - Supabase provides authentication, PostgreSQL, and realtime features.
 - The `bikes` database table stores motorcycle listings to avoid unnecessary schema changes.
 
+## Security & Observability
+
+- JWT-based authentication using Supabase Auth
+- Row Level Security (RLS) policies for secure database access
+- Input validation on auction and bidding operations
+- Real-time bid synchronization using Supabase Realtime
+- Edge Functions for secure auction lifecycle management
+  
 ## Future Enhancements
 
 - Payment gateway integration (Stripe/Razorpay)
@@ -285,6 +306,8 @@ npm run lint
 # Build for production
 npm run build
 ```
+The application was manually tested for user authentication, auction creation, bidding workflow, responsive design, and real-time bid synchronization.
+
 ## Demo Credentials
 
 ### Admin
