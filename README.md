@@ -14,6 +14,7 @@ A production-ready, full-stack motorcycle auction platform built with React (Vit
 ## Live Demo
 
 **Application:** https://bike-auction-platform-gamma.vercel.app/
+
 **GitHub Repository:** https://github.com/RiddhikaTripathi/bike-auction-platform
 
 ## Features
