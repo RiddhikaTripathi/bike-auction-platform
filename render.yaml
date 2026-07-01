@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: bike-auction-platform
+    env: docker
+    dockerContext: .
+    dockerfilePath: ./Dockerfile
+    plan: starter
+    healthCheck:
+      type: http
+      name: health
+      path: /health
+      interval: 30s
+      timeout: 10s
+    domains:
+      - "bike-auction.onrender.com"
